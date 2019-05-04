@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "devDependencies": {
+    "font-awesome-5-css": "^5.4.1",
+    "bootstrap-datepicker": "^1.8.0"
+    
+  }
+}
