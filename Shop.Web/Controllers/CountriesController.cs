@@ -32,7 +32,8 @@
             }
 
             var countryId = await this.countryRepository.DeleteCityAsync(city);
-            return this.RedirectToAction($"Details/{countryId}");
+            return this.RedirectToAction();
+            //return this.RedirectToAction($"Details/{countryId}");
         }
 
         public async Task<IActionResult> EditCity(int? id)
@@ -59,7 +60,8 @@
                 var countryId = await this.countryRepository.UpdateCityAsync(city);
                 if (countryId != 0)
                 {
-                    return this.RedirectToAction($"Details/{countryId}");
+                    return this.RedirectToAction();
+                    //return this.RedirectToAction($"Details/{countryId}");
                 }
             }
 
@@ -88,11 +90,10 @@
         {
             if (this.ModelState.IsValid)
             {
-                var countryID = model.CountryId;
                 await this.countryRepository.AddCityAsync(model);
-                return this.RedirectToAction($"Details/{countryID}");
-                //return this.RedirectToAction($"Details/{model.CountryId}", "Countries", new { version = "1.0" });
-                //return this.RedirectToAction();
+                //return this.RedirectToAction($"Details/{model.CountryId}");
+                //return this.RedirectToAction("Details", "Countries", new { model.CountryId });
+                return this.RedirectToAction();
             }
 
             return this.View(model);

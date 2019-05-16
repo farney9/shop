@@ -11,11 +11,11 @@
         <h4>Country</h4>
         <hr />
         <div class="row d-flex align-self-auto">
-            <div class="col-lg-1">
+            <div class="col-xs-1 col-sm-1 col-lg-1">
                 <h5>@Html.DisplayNameFor(model => model.Name)</h5>
                 
             </div>             
-            <div class="col-lg-1">
+            <div class="col-xs-11 col-sm-11 col-lg-6">
                 <h5>@Html.DisplayFor(model => model.Name)</h5>
             </div>
 
@@ -24,9 +24,9 @@
 </div>
 <div class="row my-3">
     <div class=" col-12 my-6">
-        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
-        <a asp-action="AddCity" asp-route-id="@Model.Id" class="btn btn-info">Add City</a>
-        <a asp-action="Index" class="btn btn-success">Back to List</a>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning"><i class="far fa-edit"></i> Edit</a>
+        <a asp-action="AddCity" asp-route-id="@Model.Id" class="btn btn-info"><i class="far fa-plus"></i> Add City</a>
+        <a asp-action="Index" class="btn btn-success"><i class="far fa-chevron-left"></i> Back to List</a>
     </div>
 </div>
 
